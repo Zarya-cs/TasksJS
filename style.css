@@ -1,0 +1,8 @@
+.task {
+    border: 1px solid blue;
+    width: fit-content;
+    margin: auto;
+}
+body {
+    background: antiquewhite;
+}
