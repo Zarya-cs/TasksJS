@@ -2,7 +2,13 @@
     border: 1px solid blue;
     width: fit-content;
     margin: auto;
+    padding: 15px;
+    border-radius: 10px;
 }
 body {
-    background: antiquewhite;
+    font-family: 'Montserrat';
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
 }
