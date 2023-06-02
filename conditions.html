@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Название дня недели по номеру</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+    <body>
+    <div class="task">
+        <h2>Название дня недели</h2>
+        <p>Введите номер дня недели (1-7)</p>
+            <input type="number" id="number-1" min="1" max="7" placeholder="1-7">
+            <button type="button" id="checkButton">Проверить</button>
+        <p id="result-1"></p>
+    </div>
+
+<div class="task">
+    <form>
+    <h2>Проверка на палиндром</h2>
+        <p>Введите четырехзначное число</p>
+    <input type="text" id="number-2" placeholder="Введите значение">
+    <button type="button" onclick = "checkPalindrome()">Проверить</button>
+    <p id="result-2"></p>
+    </form>
+    </div>
+    <script src="conditions.js"></script>
+    </body>
+</html>

@@ -1,8 +1,15 @@
 .task {
-    border: 1px solid blue;
-    width: fit-content;
+    border: 1px solid brown;
+    width: 500pxK;
     margin: auto;
+    padding: 15px;
+    border-radius: 10px;
 }
 body {
+    font-family: 'Montserrat';
     background: antiquewhite;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
 }
