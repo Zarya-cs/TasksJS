@@ -8,6 +8,7 @@ document.getElementById("checkButton").addEventListener("click", function() {
     document.getElementById("result-1").innerHTML = "День недели: " + days[number - 1];}
 });
 
+
 function checkPalindrome() {
     let number = document.getElementById("number-2").value;
     if (number.length != 4) {
