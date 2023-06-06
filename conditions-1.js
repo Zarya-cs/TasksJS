@@ -8,19 +8,7 @@ document.getElementById("checkButton").addEventListener("click", function() {
     document.getElementById("result-1").innerHTML = "День недели: " + days[number - 1];}
 });
 
-/* 2 задача */
-function checkPalindrome() {
-    let number = document.getElementById("number-2").value;
-    if (number.length != 4) {
-        document.getElementById("result-2").innerHTML = "Число должно быть четырехзначным";
-        return;
-    }
-    if (number[0] == number[3] && number[1] == number[2]) {
-        document.getElementById("result-2").innerHTML = "Число является палиндромом";
-    } else {
-        document.getElementById("result-2").innerHTML = "Число не является палиндромом";
-    }
-}
+
 /* 3 задача */
 let numberInput = document.getElementById('number-3');
 let checkButton = document.getElementById('checkButton-3');
