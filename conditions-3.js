@@ -1,17 +1,17 @@
 /* 3 задача */
-let numberInput = document.getElementById('number-3');
-let checkButton = document.getElementById('checkButton-3');
-let result = document.getElementById('result-3');
 
-checkButton.addEventListener('click', function() {
+let numberInput = document.getElementById('numberInput');
+let checkButtonThree = document.getElementById('checkButton-3');
+let resultThree = document.getElementById('resultThree');
+
+checkButtonThree.addEventListener('click', function() {
     let number = numberInput.value;
 
     if (number.length !== 4 || isNaN(number)) {
-        result.textContent = 'Введите четырехзначное число!';
+        resultThree.textContent = 'Введите четырехзначное число!';
     } else {
         let leftHalf = number.slice(0, 2);
         let rightHalf = number.slice(2);
-
         let leftSum = 0;
         let rightSum = 0;
 
@@ -21,9 +21,9 @@ checkButton.addEventListener('click', function() {
         }
 
         if (leftSum === rightSum) {
-            result.textContent = 'Это счастливый билет, поздравляю!';
+            resultThree.textContent = 'Это счастливый билет, поздравляю!';
         } else {
-            result.textContent = 'Это не счастливый билет, потому что ты - лох :(';
+            resultThree.textContent = 'Это не счастливый билет, потому что ты - лох :(';
         }
     }
 })

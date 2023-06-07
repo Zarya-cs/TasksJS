@@ -1,13 +1,14 @@
-/* 2 задача */
-function checkPalindrome() {
-    let number = document.getElementById("number-2").value;
-    if (number.length != 4) {
-        document.getElementById("result-2").innerHTML = "Число должно быть четырехзначным";
+ checkButtonTwo = document.getElementById('checkButtonTwo');
+checkButtonTwo.addEventListener('click', function() {
+    let number = document.getElementById('numberInputTwo').value;
+    if (number.length !== 4) {
+        document.getElementById('resultTwo').textContent = 'Введите четырехзначное число';
         return;
     }
-    if (number[0] == number[3] && number[1] == number[2]) {
-        document.getElementById("result-2").innerHTML = "Число является палиндромом";
+    let digits = number.split('');
+    if (digits[0] === digits[3] && digits[1] === digits[2]) {
+        document.getElementById('resultTwo').textContent = 'Число является палиндромом';
     } else {
-        document.getElementById("result-2").innerHTML = "Число не является палиндромом";
+        document.getElementById('resultTwo').textContent = 'Число не является палиндромом';
     }
-}
+});
