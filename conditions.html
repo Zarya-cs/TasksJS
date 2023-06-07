@@ -12,38 +12,56 @@
     <div class="task">
         <h2>Название дня недели</h2>
         <p>Введите номер дня недели (1-7)</p>
-            <input type="number" id="dayInput" min="1" max="7" placeholder="1-7">
+            <input type="number" id="dayInput" min="1" max="7" placeholder="1-7" required>
             <button type="button" id="checkButton">Проверить</button>
         <p id="result-1"></p>
     </div>
 <div class="task">
-    <form>
+
         <h2>Проверка на палиндром</h2>
         <p>Введите четырехзначное число:</p>
-        <input type="number" id="numberInputTwo" min="0" placeholder="Введите значение">
+        <input type="number" id="numberInputTwo" min="0" placeholder="Введите значение" required>
         <button type="button" id="checkButtonTwo">Проверить</button>
         <p id="resultTwo"></p>
-    </form>
+
 </div>
     <div class="task">
         <h2>Проверка счастливого билета</h2>
         <p>Введите номер билета</p>
-        <input type="number" id="numberInput" min="0" placeholder="Введите значение">
+        <input type="number" id="numberInput" min="0" placeholder="Введите значение" required>
         <button type="submit" id="checkButton-3">Проверить</button>
         <p id="resultThree"></p>
     </div>
     <div class="task">
-        <form>
+
             <h2>Является ли палиндромом двоичное представление числа с учетом сохранения старших нулей</h2>
             <label><br>Введите число:</br></label>
-            <input type="number" id="numberInputFourth" min="0" placeholder="Введите значение">
+            <input type="number" id="numberInputFourth" min="0" placeholder="Введите значение" required>
             <button type="button" id="checkButtonFourth" >Проверить</button>
             <p id="resultFourth"></p>
+
+    </div>
+    <div class="task">
+        <form>
+            <h2>Решение квадратного уравнения</h2>
+            <p>Введите значения a,b,c</p>
+            <label for="a">a:</label>
+            <input type="number" id="a"><br>
+
+            <label for="b">b:</label>
+            <input type="number" id="b"><br>
+
+            <label for="c">c:</label>
+            <input type="number" id="c"><br>
+
+            <button id="resolve">Решить</button>
+            <p id="resultFive"></p>
         </form>
     </div>
     <script src="conditions-1.js"></script>
     <script src="conditions-2.js"></script>
     <script src="conditions-3.js"></script>
     <script src="conditions-4.js"></script>
+    <script src="conditions-5.js"></script>
     </body>
 </html>
