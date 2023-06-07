@@ -1,4 +1,5 @@
- checkButtonTwo = document.getElementById('checkButtonTwo');
+/* 2 задача */
+checkButtonTwo = document.getElementById('checkButtonTwo');
 checkButtonTwo.addEventListener('click', function() {
     let number = document.getElementById('numberInputTwo').value;
     if (number.length !== 4) {

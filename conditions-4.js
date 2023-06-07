@@ -1,3 +1,4 @@
+/* 4 задача */
 function isBinaryPalindrome(num) {
     let binary = num.toString(2);
     let len = binary.length;

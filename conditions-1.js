@@ -1,5 +1,4 @@
-
-
+/* 1 задача */
 let dayInput = document.getElementById('dayInput');
 let checkButton = document.getElementById('checkButton');
 let result = document.getElementById('result-1');
