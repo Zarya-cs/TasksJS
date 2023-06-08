@@ -24,7 +24,7 @@ checkButtonThree.addEventListener('click', function(event) {
         if (leftSum === rightSum) {
             resultThree.textContent = 'Это счастливый билет, поздравляю!';
         } else {
-            resultThree.textContent = 'Это не счастливый билет, потому что ты - лох :(';
+            resultThree.textContent = 'Это не счастливый билет';
         }
     }
 })
