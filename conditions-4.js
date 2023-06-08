@@ -8,9 +8,6 @@ function isBinaryPalindrome(num) {
             binary = "0" + binary
         }
     }
-
-    console.log(binary)
-
     let len = binary.length;
     for (let i = 0; i < len / 2; i++) {
         if (binary[i] !== binary[len - 1 - i]) {
