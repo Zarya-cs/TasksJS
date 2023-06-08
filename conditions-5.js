@@ -12,7 +12,7 @@ function quadraticEquation(a, b, c) {
     }
 }
 
-document.getElementById('resolve').addEventListener('click', function() {
+document.getElementById('resolve').addEventListener('click', function(event) {
     event.preventDefault()
     let a = parseFloat(document.getElementById('a').value);
     let b = parseFloat(document.getElementById('b').value);
@@ -24,7 +24,7 @@ document.getElementById('resolve').addEventListener('click', function() {
     if (solutions === null) {
         result.innerText = 'Действительных решений нет';
     } else if (Array.isArray(solutions)) {
-        result.innerText = 'x1 = ' + solutions[0] + ', x2 = ' + solutions[1];
+        result.innerText = 'x1 = ' + solutions[0].toPrecision(3) + ', x2 = ' + solutions[1].toPrecision(3)  ;
     } else {
         result.innerText = 'x = ' + solutions;
     }

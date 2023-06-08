@@ -1,6 +1,7 @@
 /* 2 задача */
 checkButtonTwo = document.getElementById('checkButtonTwo');
-checkButtonTwo.addEventListener('click', function() {
+checkButtonTwo.addEventListener('click', function(event) {
+    event.preventDefault()
     let number = document.getElementById('numberInputTwo').value;
     if (number.length !== 4) {
         document.getElementById('resultTwo').textContent = 'Введите четырехзначное число';

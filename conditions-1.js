@@ -1,9 +1,10 @@
 /* 1 задача */
 let dayInput = document.getElementById('dayInput');
 let checkButton = document.getElementById('checkButton');
-let result = document.getElementById('result-1');
+let result = document.getElementById('resultOne');
 
-checkButton.addEventListener('click', function() {
+checkButton.addEventListener('click', (event) => {
+    event.preventDefault()
     let dayNumber = parseInt(dayInput.value);
 
     if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 7) {

@@ -4,7 +4,8 @@ let numberInput = document.getElementById('numberInput');
 let checkButtonThree = document.getElementById('checkButton-3');
 let resultThree = document.getElementById('resultThree');
 
-checkButtonThree.addEventListener('click', function() {
+checkButtonThree.addEventListener('click', function(event) {
+    event.preventDefault()
     let number = numberInput.value;
 
     if (number.length !== 4 || isNaN(number)) {
