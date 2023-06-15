@@ -6,7 +6,11 @@ let result = document.getElementById('resultOne');
 checkButton.addEventListener('click', (event) => {
     event.preventDefault()
     let dayNumber = parseInt(dayInput.value);
-
+    let number = document.getElementById('dayInput').value;
+    if (number.length !== 1) {
+        document.getElementById('resultOne').textContent = 'Введите однозначное число';
+        return;
+    }
     if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 7) {
         result.textContent = 'Введите корректное значение!';
     } else {

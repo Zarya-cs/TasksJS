@@ -18,8 +18,13 @@ function isBinaryPalindrome(num) {
 }
 document.getElementById('checkButtonFourth').addEventListener('click', function(event) {
     event.preventDefault()
-    let num = parseInt(document.getElementById('numberInputFourth').value);
-    const result = document.getElementById('resultFourth');
+    let num = document.getElementById('numberInputFourth').value;
+    if (num.length < 1) {
+        document.getElementById('resultFourth').textContent = 'Строка не должна быть пустой!';
+        return;
+        }
+
+    let result = document.getElementById('resultFourth');
     if (isBinaryPalindrome(num)) {
         result.innerText = 'Данное число является палиндромом в двоичном представлении';
     } else {
