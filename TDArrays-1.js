@@ -40,17 +40,12 @@ swapBtn.addEventListener("click", function() {
         array.push(miniArray)
     }
 
-    console.log("made array")
-    console.log(array)
-
     if (rows === "1") {
-        console.log("row 1")
         render(array)
         return
     }
 
     if (rows === "2") {
-        console.log("row 2")
         let newArray = []
 
         newArray.push(array[1])
@@ -59,8 +54,6 @@ swapBtn.addEventListener("click", function() {
         render(newArray)
         return
     }
-
-    console.log("row 3+")
 
     let row1 = Math.floor(Math.random() * rows)
     let row2
@@ -79,7 +72,6 @@ swapBtn.addEventListener("click", function() {
 });
 
 function render(matrix) {
-    console.log("render")
     let matrixTable = "<table class='matrix'>"
 
     for (let i in matrix) {
@@ -95,6 +87,4 @@ function render(matrix) {
     matrixTable += "</table>";
 
     document.getElementById("render1").innerHTML = matrixTable;
-
-    console.log("render done")
 }
