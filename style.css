@@ -33,3 +33,12 @@ footer {
     margin-top: 25px;
     text-align: center;
 }
+.cent {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.matrix tr td {
+    border: 1px solid black;
+    width: 50px;
+    text-align: center;
+}
