@@ -40,12 +40,12 @@ swapBtn.addEventListener("click", function() {
         array.push(miniArray)
     }
 
-    if (rows === "1") {
+    if (columns === "1") {
         render(array)
         return
     }
 
-    if (rows === "2") {
+    if (columns === "2") {
         let newArray = []
 
         newArray.push(array[1])
