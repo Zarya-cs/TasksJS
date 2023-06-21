@@ -11,8 +11,8 @@
 <body>
 <ul>
     <li class="switch"><a href="conditions.html">1</a></li>
-    <li  class="switch"><a href="oneDmensionalArrays.html">2</a></li>
-    <li class="switch"><a href="cycles.html">3</a> </li>
+    <li class="switch"><a href="oneDmensionalArrays.html">2</a></li>
+    <li class="switch"><a href="cycles.html">3</a></li>
     <li class="switch"><a href="twoDmensionalArrays.html">4.1</a></li>
 </ul>
 
@@ -21,28 +21,49 @@
     <form>
         <h2>Замена двух любых строк в двумерном массиве</h2>
         <p class="cent">Создание матрицы</p>
-        <label for="rows">Количество рядов:</label>
-        <input type="number" id="rows" name="rows" min="1"><br><br>
-        <label for="columns">Количество строк:</label>
-        <input type="number" id="columns" name="columns" min="1"><br><br>
-        <button id="createBtn">Создать матрицу</button><br><br>
-        <div id="matrix"></div>
+        <label for="rows1">Количество рядов:</label>
+        <input type="number" id="rows1" name="rows" min="1"><br><br>
+        <label for="columns1">Количество строк:</label>
+        <input type="number" id="columns1" name="columns" min="1"><br><br>
+        <button id="createBtn">Создать матрицу</button>
+        <br><br>
+        <div id="matrix1"></div>
         <button type="button" id="swapBtn">Поменять местами</button>
         <div id="render1"></div>
     </form>
 </div>
 <div class="task">
     <form>
-<h2>Поиск наибольшего по модулю элемента в матрице целых чисел</h2>
+        <h2>Поиск наибольшего по модулю элемента в матрице целых чисел</h2>
         <p class="cent">Создание матрицы</p>
         <label for="row">Количество рядов:</label>
         <input type="number" id="row" name="row" min="1"><br><br>
         <label for="column">Количество строк:</label>
         <input type="number" id="column" name="column" min="1"><br><br>
-        <button id="createBtn2">Создать матрицу</button><br><br>
+        <button id="createBtn2">Создать матрицу</button>
+        <br><br>
         <div id="matrix2"></div>
         <button id="findBtn">Проверить</button>
         <p id="resultTD"></p>
+    </form>
+</div>
+<div class="task">
+    <form>
+        <h2>Найти количество положительных элементов, лежащих на главной диагонали квадратной матрицы</h2>
+        <p class="cent">Создание матрицы</p>
+        <label for="rows1">Количество рядов:</label>
+        <input type="number" id="rows3" name="rows" min="1"><br><br>
+        <label for="columns1">Количество строк:</label>
+        <input type="number" id="columns3" name="columns" min="1"><br><br>
+        <!--        <label for="row">Количество рядов:</label>-->
+        <!--        <input type="number" id="rows3" name="row" min="1"><br><br>-->
+        <!--        <label for="column">Количество строк:</label>-->
+        <!--        <input type="number" id="columns3" name="column" min="1"><br><br>-->
+        <button id="createBtn3">Создать матрицу</button>
+        <br><br>
+        <div id="matrix3"></div>
+        <button id="checkThis">Вывести результат</button>
+        <div id="render-3"></div>
     </form>
 </div>
 <footer>
@@ -51,5 +72,6 @@
 <script src="helpers.js"></script>
 <script src="TDArrays-1.js"></script>
 <script src="TDArrays-2.js"></script>
+<script src="TDArrays-3.js"></script>
 </body>
 </html>

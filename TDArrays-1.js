@@ -2,22 +2,7 @@ let createBtn = document.getElementById("createBtn");
 let matrixContainer = document.getElementById("matrix");
 
 createBtn.addEventListener("click", function() {
-    let rows = document.getElementById("rows").value;
-    let columns = document.getElementById("columns").value;
-
-    if (rows && columns) {
-        let matrix = "<table>";
-        for (let i = 0; i < columns; i++) {
-            matrix += "<tr>";
-            for (let j = 0; j < rows; j++) {
-                let identifier = `matrix-${i}-${j}`
-                matrix += `<td><input type='text' name='${identifier}' id='${identifier}' style="width: 60px"></td>`;
-            }
-            matrix += "</tr>";
-        }
-        matrix += "</table>";
-        matrixContainer.innerHTML = matrix;
-    }
+    createInputs(1)
 });
 
 let swapBtn = document.getElementById("swapBtn");

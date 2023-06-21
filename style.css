@@ -42,3 +42,6 @@ footer {
     width: 50px;
     text-align: center;
 }
+.positive {
+    background-color: orange;
+}
