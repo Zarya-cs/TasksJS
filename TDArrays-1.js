@@ -1,32 +1,20 @@
 let createBtn = document.getElementById("createBtn");
-let matrixContainer = document.getElementById("matrix");
+let matrixContainer = document.getElementById("matrix1");
 
 createBtn.addEventListener("click", function() {
-    createInputs(1)
+    createInputs(1, matrixContainer)
 });
 
 let swapBtn = document.getElementById("swapBtn");
 swapBtn.addEventListener("click", function() {
-    let rows = document.getElementById("rows").value;
-    let columns = document.getElementById("columns").value;
-    console.log(rows, columns)
+    let rows = document.getElementById("rows1").value;
+    let columns = document.getElementById("columns1").value;
 
-    let array = [];
+    let array =  collectValues(columns, rows, 1);
 
-    for (let i = 0; i < columns; i++) {
-        let miniArray = [];
-
-        for (let j = 0; j < rows; j++) {
-            let identifier = `matrix-${i}-${j}`
-            let inputValue = document.getElementById(identifier).value
-            miniArray.push(inputValue)
-        }
-
-        array.push(miniArray)
-    }
 
     if (columns === "1") {
-        render(array)
+        render(array, 1)
         return
     }
 
@@ -36,7 +24,7 @@ swapBtn.addEventListener("click", function() {
         newArray.push(array[1])
         newArray.push(array[0])
 
-        render(newArray)
+        render(newArray, 1)
         return
     }
 
@@ -53,23 +41,5 @@ swapBtn.addEventListener("click", function() {
     array[row1] = array[row2];
     array[row2] = temp;
 
-    render(array)
+    render(array, 1)
 });
-
-function render(matrix) {
-    let matrixTable = "<table class='matrix'>"
-
-    for (let i in matrix) {
-        matrixTable += "<tr>"
-
-        for (let j in matrix[i]) {
-            matrixTable += `<td>${matrix[i][j]}</td>`;
-        }
-
-        matrixTable += "</tr>"
-    }
-
-    matrixTable += "</table>";
-
-    document.getElementById("render1").innerHTML = matrixTable;
-}

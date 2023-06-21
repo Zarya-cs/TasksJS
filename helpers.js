@@ -4,42 +4,59 @@ for (let form of forms) {
         event.preventDefault()
     })
 }
-function render(matrix) {
+
+function render(matrix, number) {
     let matrixTable = "<table class='matrix'>"
 
     for (let i in matrix) {
         matrixTable += "<tr>"
 
         for (let j in matrix[i]) {
-            matrixTable += `<td>${matrix[i][j]}</td>`;
+            let cell = `cell${number}-${i}-${j}`;
+            matrixTable += `<td id='${cell}'>${matrix[i][j]}</td>`;
         }
-
         matrixTable += "</tr>"
     }
-
     matrixTable += "</table>";
 
-    document.getElementById("render1").innerHTML = matrixTable;
+    document.getElementById("render" + number).innerHTML = matrixTable;
 }
 
-function createInputs (number) {
+// Берет значения из инпутов
+let collectValues = function (columns, rows, number) {
+    let array = []
+    for (let i = 0; i < columns; i++) {
+        let miniArray = [];
+
+        for (let j = 0; j < rows; j++) {
+            let identifier = `matrix${number}-${i}-${j}`
+            let inputValue = document.getElementById(identifier).value
+            miniArray.push(inputValue)
+        }
+
+        array.push(miniArray)
+    }
+    return array
+}
+
+function createInputs(number, container) {
     let rows = document.getElementById("rows" + number).value;
     let columns = document.getElementById("columns" + number).value;
-    let matrix = document.getElementById("matrix" + number)
-    if (rows && columns) {
-        let table = document.createElement("table")
-        matrix.appendChild(table)
-        for (let i = 0; i < columns; i++) {
-            let row = document.createElement("tr")
-            table.appendChild(row)
-            for (let j = 0; j < rows; j++) {
-                let cell = document.createElement("td")
-                row.appendChild(cell)
-                let identifier = `matrix-${i}-${j}`
-                cell.innerHTML = `<input type='text' name='${identifier}' id='${identifier}' style="width: 60px>`
 
+    if (rows && columns) {
+        let matrix = "<table>";
+
+        for (let i = 0; i < columns; i++) {
+            matrix += "<tr>"
+
+            for (let j = 0; j < rows; j++) {
+                let identifier = `matrix${number}-${i}-${j}`
+                matrix += `<td><input type='text' name='${identifier}' id='${identifier}' style="width: 60px"></td>`;
 
             }
+            matrix += "</tr>"
         }
+        matrix += "</table>";
+        container.innerHTML = matrix;
     }
 }
