@@ -21,18 +21,6 @@ document.getElementById("generate5").addEventListener("click", function() {
     }
 });
 
-document.getElementById("checkArrayBtn").addEventListener("click", () => {
-    let arr = [];
-    let table = document.getElementById("arrayTD5");
-    for (let i = 0; i < table.rows.length; i++) {
-        arr[i] = [];
-        for (let j = 0; j < table.rows[i].cells.length; j++) {
-            arr[i][j] = parseInt(table.rows[i].cells[j].innerHTML);
-        }
-    }
-
-});
-
 document.getElementById("checkArrayBtn").addEventListener("click", function() {
     let number = parseInt(document.getElementById("xNum").value);
     let table = document.getElementById("arrayTD5");
