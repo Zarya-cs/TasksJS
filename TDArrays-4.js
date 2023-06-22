@@ -9,7 +9,7 @@ document.getElementById("generate").addEventListener("click", function() {
     for (let i = 0; i < rows; i++) {
         array[i] = [];
         for (let j = 0; j < columns; j++) {
-            array[i][j] = Math.floor(Math.random() * 200);
+            array[i][j] = Math.floor(Math.random() * 199);
         }
     }
     let table = document.getElementById("arrayTD");

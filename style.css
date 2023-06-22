@@ -50,3 +50,6 @@ table tr td{
     width: 50px;
     text-align: center;
 }
+.checked {
+    background-color: orange;
+}
