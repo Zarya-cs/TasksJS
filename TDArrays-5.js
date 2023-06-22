@@ -30,13 +30,7 @@ document.getElementById("checkArrayBtn").addEventListener("click", () => {
             arr[i][j] = parseInt(table.rows[i].cells[j].innerHTML);
         }
     }
-    let x = parseInt(document.getElementById("xNum").value);
-    let result = countX(arr.flat(), x);
-    if (result > 0) {
-        document.getElementById("result5").innerHTML = ``;
-    } else {
-        document.getElementById("result5").innerHTML = `X`;
-    }
+
 });
 
 document.getElementById("checkArrayBtn").addEventListener("click", function() {
