@@ -45,3 +45,8 @@ footer {
 .positive {
     background-color: orange;
 }
+table tr td{
+    border: 1px solid brown;
+    width: 50px;
+    text-align: center;
+}
