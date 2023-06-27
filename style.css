@@ -6,19 +6,19 @@
     border-radius: 10px;
 }
 body {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     background: antiquewhite;
 }
 h1 {
     text-align: center;
 }
 h2 {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 p {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 ul {
     display: flex;
@@ -44,6 +44,9 @@ footer {
 }
 .positive {
     background-color: orange;
+}
+.positive1 {
+    background-color: coral;
 }
 table tr td{
     border: 1px solid brown;
