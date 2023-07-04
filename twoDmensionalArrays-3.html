@@ -16,16 +16,21 @@
     <li><a href="twoDmensionalArrays.html">4.1</a></li>
     <li><a href="twoDmensionalArrays-2.html">4.2</a></li>
     <li><a href="twoDmensionalArrays-3.html">4.3</a></li>
+    <li><a href="recursion.html">5</a></li>
 </ul>
 <h1>Двумерные массивы (уровень сложности: реализм)</h1>
 <div class="task">
     <form>
         <h2>Заполнить двумерный массив по правилу</h2>
-        <label for="size3-1">Введите размер массива: </label>
-        <input type="number" id="size3-1" min="1"><br><br>
-        <button id="createMatrix3-1">Создать массив</button>
-        <br><br>
-        <table id="arrayTable"></table>
+        <p class="cent">Создание массива из случайных чисел</p>
+        <label for="rows31">Количество рядов:</label>
+        <input type="number" id="rows31" name="rows" min="1"><br><br>
+        <label for="columns31">Количество строк:</label>
+        <input type="number" id="columns31" name="columns" min="1"><br><br>
+        <button id="generate31">Сгенерировать массив</button>
+        <h3>Сгенерированный массив:</h3>
+        <p id="result31"></p>
+        <table id="arrayTD31"></table>
     </form>
 </div>
 <div class="task">
@@ -41,40 +46,45 @@
 </div>
 <div class="task">
     <form>
-        <h2>Поиск минимального элемента ниже побочной диагонали.
+        <h2>Поиск минимального элемента ниже побочной диагонали в квадратной матрице.
             Вывод на экран в табличном виде исходной матрицы и отдельно часть матрицы ниже побочной диагонали</h2>
         <input type="number" id="size3.3" min="1">
         <button id="generate3.3">Сгенерировать массив</button>
         <h3>Сгенерированный массив:</h3>
-        <table id="array3.3"></table>
-        <div id="result3.3"></div>
         <table id="matrix3.3"></table>
+        <div id="result3.3"></div>
         <table id="lowerMatrix3.3"></table>
     </form>
 </div>
 <div class="task">
     <form>
         <h2>Сортировка столбцов в матрице по убыванию значений элементов в первой строке</h2>
-        <input type="number" id="size3.4" min="1">
-        <button id="generate3.4">Сгенерировать массив</button>
+        <p class="cent">Создание массива из случайных чисел</p>
+        <label for="rows34">Количество рядов:</label>
+        <input type="number" id="rows34" name="rows" min="1"><br><br>
+        <label for="columns34">Количество строк:</label>
+        <input type="number" id="columns34" name="columns" min="1"><br><br>
+        <button id="generate34">Сгенерировать массив</button>
         <h3>Сгенерированный массив:</h3>
-        <table id="array3.4"></table>
-        <div id="result3.4"></div>
-        <table id="matrix3.4"></table>
-        <button id="swapBtn3.4">Сортировать</button>
-        <br><br>
+        <p id="result34"></p>
+        <table id="arrayTD34"></table>
+        <button id="sort34">Сортировать</button>
+        <table id="arrayTD344"></table>
     </form>
 </div>
 <div class="task">
     <form>
         <h2>В матрице действительных чисел перевернуть главную и побочную диагонали</h2>
-        <input type="number" id="size3.5" min="1">
-        <button id="generate3.5">Сгенерировать массив</button>
+        <p class="cent">Создание массива из случайных чисел</p>
+        <label for="rows35">Количество рядов:</label>
+        <input type="number" id="rows35" name="rows" min="1"><br><br>
+        <label for="columns35">Количество строк:</label>
+        <input type="number" id="columns35" name="columns" min="1"><br><br>
+        <button id="generate35">Сгенерировать массив</button>
         <h3>Сгенерированный массив:</h3>
-        <table id="array3.5"></table>
-        <div id="result3.5"></div>
-        <table id="matrix3.5"></table>
-        <button id="swapBtn3.5">Поменять местами</button>
+        <p id="result35"></p>
+        <table id="arrayTD35"></table>
+        <button id="swapBtn35">Поменять местами</button>
     </form>
 </div>
 <footer>

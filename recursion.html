@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/icon-sharingan.png" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <title>Двумерные массивы</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+<ul>
+    <li><a href="conditions.html">1</a></li>
+    <li><a href="oneDmensionalArrays.html">2</a></li>
+    <li><a href="cycles.html">3</a></li>
+    <li><a href="twoDmensionalArrays.html">4.1</a></li>
+    <li><a href="twoDmensionalArrays-2.html">4.2</a></li>
+    <li><a href="twoDmensionalArrays-3.html">4.3</a></li>
+    <li><a href="recursion.html">5</a></li>
+</ul>
+<h1>Рекурсии</h1>
+<div class="task">
+    <form>
+        <h2>Вывести все числа от 1 до n</h2>
+        <input type="number" id="number1" min="1">
+        <button id="recursion1">Вывести</button>
+        <p id="result1"></p>
+    </form>
+</div>
+<div class="task">
+    <form>
+        <h2>Выведите все числа от A до B включительно, в порядке возрастания</h2>
+        <div>
+            <label for="number2A">Число A</label>
+            <input type="number" id="number2A" min="1">
+        </div>
+        <div>
+            <label for="number2B">Число B</label>
+            <input type="number" id="number2B" min="1">
+        </div>
+        <button id="recursion2">Вывести</button>
+        <p id="result2"></p>
+    </form>
+</div>
+<div class="task">
+    <form>
+        <h2>Функция Аккермана. Вывод A(m,n)</h2>
+        <img src="img/akkerman.svg" alt="functionOfAkkerman">
+        <div>
+            <label for="m">Введите число m</label>
+            <input type="number" id="m" min="0">
+        </div>
+        <div>
+            <label for="n">Введите число n</label>
+            <input type="number" id="n" min="0">
+        </div>
+        <button id="deem">Вывести</button>
+        <p id="result53"></p>
+    </form>
+</div>
+<div class="task">
+    <form>
+        <h2>Дано натуральное число N.
+            Выведет слово YES, если число N является точной степенью двойки, или слово NO в противном случае</h2>
+        <label for="NL">Введите число N:</label>
+        <input type="number" id="NL" min="1">
+        <button id="checkNumber">Проверить</button>
+        <p id="result54"></p>
+    </form>
+</div>
+<div class="task">
+    <form>
+        <h2>Дано натуральное число N.
+            Вычислить сумму его цифр</h2>
+        <label for="NN">Введите число N:</label>
+        <input type="number" id="NN" min="1">
+        <button id="checkNumberN">Проверить</button>
+        <p id="result55"></p>
+    </form>
+</div>
+
+<footer>
+    <p>REDFLAG 2023© All rights reserved</p>
+</footer>
+<script src="helpers.js"></script>
+<script src="recursion-1.js"></script>
+<script src="recursion-2.js"></script>
+<script src="recursion-3.js"></script>
+<script src="recursion-4.js"></script>
+<script src="recursion-5.js"></script>
+</body>
+</html>

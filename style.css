@@ -56,3 +56,6 @@ table tr td{
 .checked {
     background-color: orange;
 }
+a {
+    text-decoration: none;
+}

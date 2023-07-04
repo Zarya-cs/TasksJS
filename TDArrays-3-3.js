@@ -1,7 +1,7 @@
 let generateButton33 = document.getElementById("generate3.3");
 let sizeInput33 = document.getElementById("size3.3");
-let resultDiv33 = document.getElementById("result3.3");
 let matrixTable33 = document.getElementById("matrix3.3");
+let matrixTable334 = document.getElementById("lowerMatrix3.3")
 generateButton33.addEventListener("click", function () {
     let size33 = parseInt(sizeInput33.value);
 
@@ -55,7 +55,7 @@ generateButton33.addEventListener("click", function () {
             }
         }
     }
-
+    matrixTable334.innerHTML = "";
     // Вывод нижней части матрицы
     for (let i = 0; i < size33; i++) {
         let row = document.createElement("tr");
@@ -64,6 +64,6 @@ generateButton33.addEventListener("click", function () {
             cell.textContent = lowerMatrix33[i][j];
             row.appendChild(cell);
         }
-        matrixTable33.appendChild(row);
+        matrixTable334.appendChild(row);
     }
 });

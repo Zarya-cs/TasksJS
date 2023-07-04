@@ -1,68 +1,62 @@
-let generateButton = document.getElementById("generate2.1");
-let sizeInput = document.getElementById("size1.1");
-let matrixTable = document.getElementById("matrix1.1");
-let resultDiv = document.getElementById("result1.1");
+let generateButton = document.getElementById("generate21");
+let rowsInput = document.getElementById("rows21");
+let columnsInput = document.getElementById("columns21");
+let matrixTable = document.getElementById("arrayTD21");
+let result21 = document.getElementById("result21")
+let result211 = document.getElementById("result211")
+
 
 generateButton.addEventListener("click", function() {
+    let rows = parseInt(rowsInput.value);
+    let columns = parseInt(columnsInput.value);
 
-    let size = parseInt(sizeInput.value);
-
-    if (size < 1) {
-        document.getElementById('result1.1').textContent = 'Введите целое положительное число'
-        return;
-    }
-
-    // генерация матрицы
-    let matrix = [];
-    for (let i = 0; i < size; i++) {
-        matrix[i] = [];
-        for (let j = 0; j < size; j++) {
-            matrix[i][j] = Math.floor(Math.random() * 10);
+    let array = [];
+    for (let i = 0; i < rows; i++) {
+        array[i] = [];
+        for (let j = 0; j < columns; j++) {
+            array[i][j] = Math.floor(Math.random() * 100);
         }
     }
 
-    // вывод матрицы на страницу
     matrixTable.innerHTML = "";
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < rows; i++) {
         let row = document.createElement("tr");
-        for (let j = 0; j < size; j++) {
+        for (let j = 0; j < columns; j++) {
             let cell = document.createElement("td");
-            cell.textContent = matrix[i][j];
+            cell.textContent = array[i][j];
             row.appendChild(cell);
         }
         matrixTable.appendChild(row);
     }
 
-    // максимальный элемент на главной диагонали
-    let maxMain = matrix[0][0];
-    let maxMainCoords = [0, 0];
-    for (let i = 0; i < size; i++) {
-        if (matrix[i][i] > maxMain) {
-            maxMain = matrix[i][i];
-            maxMainCoords = [i, i];
-        }
-    }
-    // подсветка ячеек на главной диагонали
-    for (let i = 0; i < size; i++) {
-        if (matrix[i][i] === maxMain) {
-            matrixTable.rows[i].cells[i].classList.add("positive");
-        }
-    }
+    let maxDiagonalElement = array[0][0];
+    let maxDiagonalRow = 0;
+    let maxDiagonalColumn = 0;
 
-    // максимальный элемент на побочной диагонали
-    let maxSide = matrix[0][size - 1];
-    let maxSideCoords = [0, size - 1];
-    for (let i = 0; i < size; i++) {
-        if (matrix[i][size - 1 - i] > maxSide) {
-            maxSide = matrix[i][size - 1 - i];
-            maxSideCoords = [i, size - 1 - i];
+    let maxSecondaryDiagonalElement = array[0][columns - 1];
+    let maxSecondaryDiagonalRow = 0;
+    let maxSecondaryDiagonalColumn = columns - 1;
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < columns; j++) {
+            if (i === j && array[i][j] > maxDiagonalElement) {
+                maxDiagonalElement = array[i][j];
+                maxDiagonalRow = i;
+                maxDiagonalColumn = j;
+            }
+            if (i + j === columns - 1 && array[i][j] > maxSecondaryDiagonalElement) {
+                maxSecondaryDiagonalElement = array[i][j];
+                maxSecondaryDiagonalRow = i;
+                maxSecondaryDiagonalColumn = j;
+            }
         }
     }
-    for (let i = 0; i < size; i++) {
-        if (matrix[i][size - 1 - i] === maxSide) {
-            matrixTable.rows[i].cells[size - 1 - i].classList.add("positive1");
-        }
-    }
-    resultDiv.innerHTML = "Максимальный элемент на главной диагонали: " + maxMain + " (координаты: [" + maxMainCoords[0] + ", " + maxMainCoords[1] + "])<br>";
-    resultDiv.innerHTML += "Максимальный элемент на побочной диагонали: " + maxSide + " (координаты: [" + maxSideCoords[0] + ", " + maxSideCoords[1] + "])";
+    result21.textContent = `Максимальный элемент на главной диагонали : ${maxDiagonalElement} его координаты (${maxDiagonalColumn},${maxDiagonalRow})`
+    result211.textContent = `Максимальный элемент на побочной диагонали : ${maxSecondaryDiagonalElement} его координаты (${maxSecondaryDiagonalColumn},${maxSecondaryDiagonalRow})`
+
+    let diagonalCell = matrixTable.rows[maxDiagonalRow].cells[maxDiagonalColumn];
+    diagonalCell.classList.add("positive");
+
+    let secondaryDiagonalCell = matrixTable.rows[maxSecondaryDiagonalRow].cells[maxSecondaryDiagonalColumn];
+    secondaryDiagonalCell.classList.add("positive");
 });
